@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PropertyChanged.Fody.3.2.8\build\PropertyChanged.Fody.props" Condition="Exists('..\packages\PropertyChanged.Fody.3.2.8\build\PropertyChanged.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{283232AD-FC98-4266-A1C7-F14E9F7CB2D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CakeShop</RootNamespace>
+    <AssemblyName>CakeShop</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\bakery.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=20.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Cells.20.7.0\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.6.1513, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.6\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.1.3.1513, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.1.3\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged, Version=3.2.8.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>..\packages\PropertyChanged.Fody.3.2.8\lib\net40\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.2460.0.48, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.18.2.0.48\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.WPF, Version=18.2460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfChart.WPF.18.2.0.48\lib\net46\Syncfusion.SfChart.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CheckoutDetails.xaml.cs">
+      <DependentUpon>CheckoutDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditProduct.xaml.cs">
+      <DependentUpon>EditProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePatchRelativeToAbsoluteConverter .cs" />
+    <Compile Include="NewProduct.xaml.cs">
+      <DependentUpon>NewProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderComplete.xaml.cs">
+      <DependentUpon>OrderComplete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PriceConverter.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductType.cs" />
+    <Compile Include="Shopping.cs" />
+    <Compile Include="ShoppingCart.xaml.cs">
+      <DependentUpon>ShoppingCart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USAbout.xaml.cs">
+      <DependentUpon>USAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USContact.xaml.cs">
+      <DependentUpon>USContact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USHome.xaml.cs">
+      <DependentUpon>USHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USListOrders.xaml.cs">
+      <DependentUpon>USListOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USProduct.xaml.cs">
+      <DependentUpon>USProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USProductDetail.xaml.cs">
+      <DependentUpon>USProductDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="USStatistic.xaml.cs">
+      <DependentUpon>USStatistic.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CheckoutDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DictionaryContainingScrollbarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NewProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderComplete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShoppingCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USContact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USListOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USProductDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USStatistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\bakery.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-shopping-cart-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2728A0B5-C68D-4B90-8F17-9D5025C08C60-768x768.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\369D09AF-C959-4429-AD00-7FC86A027B58-800x800.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\40ABF8D3-550B-424D-81E2-13E740A107E2-800x800.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Images\5289E50E-DE67-457E-B62A-74D0EFAE0198-800x800.jpeg" />
+    <None Include="Images\65FDF29F-9EDA-475C-86A8-DC2F710EAA14-768x768.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\68352992-482F-4DE5-9041-8A79EE4C485C-768x768.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\6F0AAF51-2233-498A-AEFC-49DEE1DAED07-768x768.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Images\7720EC99-CDBF-44E0-9868-5C96800CA6FA-1400x525.jpeg" />
+    <Resource Include="Images\9E1AC602-6231-4B10-883D-FFDF0E379311-800x800.jpeg" />
+    <Resource Include="Images\A2BD617D-99AF-4D6A-86E2-98E73E8E3D1B-1400x525.jpeg" />
+    <Resource Include="Images\A343D42D-8308-443A-8F7F-080E956CA111-400x400.jpeg" />
+    <None Include="Images\B011FBC1-9F46-41EB-98EE-E372BC0F197A-768x768.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Images\B23CA568-4163-4353-A85A-10D9D54685C9-1400x525.jpeg" />
+    <None Include="Images\B2CE03DB-FBC1-4F48-B39F-5D4C3A9CA707-768x1024.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\B3B564A1-A294-4F53-B62A-BC0F9A5E0257-e1563642898983-768x768.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Images\B7C25144-72FF-4232-9A0B-F46BCAB509C2-800x800.jpeg" />
+    <None Include="Images\baby-dino-cake-768x768.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Images\D1ED251A-1EC3-405E-9ED7-05DD3A78F500-1400x525.jpeg" />
+    <None Include="Images\DE0B7219-61D2-4F65-BB2D-E344F2CFEA5C-768x768.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Images\E6205866-2CC1-498F-9A44-BD8C543C6DED-400x400.jpeg" />
+    <Resource Include="Images\Group-4-800x800.jpg" />
+    <None Include="Images\Group-Copy-5-768x768.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\40ABF8D3-550B-424D-81E2-13E740A107E2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\369D09AF-C959-4429-AD00-7FC86A027B58.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-plus-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-increase-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-back-to-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-next-page-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-new-product-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-save-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-delete-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-image-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-edit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\baseline_highlight_off_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\34123114_235937487140188_8411538856163147776_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\img_4266.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Group-4-Copy-19-800x800.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\mappppp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icons8-purchase-order-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\2728A0B5-C68D-4B90-8F17-9D5025C08C60-768x768.jpeg" />
+    <Resource Include="Assets\369D09AF-C959-4429-AD00-7FC86A027B58-800x800.jpeg" />
+    <Resource Include="Assets\369D09AF-C959-4429-AD00-7FC86A027B58.jpeg" />
+    <Resource Include="Assets\40ABF8D3-550B-424D-81E2-13E740A107E2-800x800.jpeg" />
+    <Resource Include="Assets\40ABF8D3-550B-424D-81E2-13E740A107E2.jpeg" />
+    <Resource Include="Assets\5289E50E-DE67-457E-B62A-74D0EFAE0198-800x800.jpeg" />
+    <Resource Include="Assets\65FDF29F-9EDA-475C-86A8-DC2F710EAA14-768x768.jpeg" />
+    <Resource Include="Assets\68352992-482F-4DE5-9041-8A79EE4C485C-768x768.jpeg" />
+    <Resource Include="Assets\6F0AAF51-2233-498A-AEFC-49DEE1DAED07-768x768.jpeg" />
+    <Resource Include="Assets\7720EC99-CDBF-44E0-9868-5C96800CA6FA-1400x525.jpeg" />
+    <Resource Include="Assets\9E1AC602-6231-4B10-883D-FFDF0E379311-800x800.jpeg" />
+    <Resource Include="Assets\A2BD617D-99AF-4D6A-86E2-98E73E8E3D1B-1400x525.jpeg" />
+    <Resource Include="Assets\A343D42D-8308-443A-8F7F-080E956CA111-400x400.jpeg" />
+    <Resource Include="Assets\B011FBC1-9F46-41EB-98EE-E372BC0F197A-768x768.jpeg" />
+    <Resource Include="Assets\B23CA568-4163-4353-A85A-10D9D54685C9-1400x525.jpeg" />
+    <Resource Include="Assets\B2CE03DB-FBC1-4F48-B39F-5D4C3A9CA707-768x1024.jpeg" />
+    <Resource Include="Assets\B3B564A1-A294-4F53-B62A-BC0F9A5E0257-e1563642898983-768x768.jpeg" />
+    <Resource Include="Assets\B7C25144-72FF-4232-9A0B-F46BCAB509C2-800x800.jpeg" />
+    <Resource Include="Assets\baby-dino-cake-768x768.jpg" />
+    <Resource Include="Assets\D1ED251A-1EC3-405E-9ED7-05DD3A78F500-1400x525.jpeg" />
+    <Resource Include="Assets\DE0B7219-61D2-4F65-BB2D-E344F2CFEA5C-768x768.jpeg" />
+    <Resource Include="Assets\E6205866-2CC1-498F-9A44-BD8C543C6DED-400x400.jpeg" />
+    <Resource Include="Assets\Group-4-800x800.jpg" />
+    <Resource Include="Assets\Group-Copy-5-768x768.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('..\packages\PropertyChanged.Fody.3.2.8\build\PropertyChanged.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PropertyChanged.Fody.3.2.8\build\PropertyChanged.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\Fody.6.2.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.2.0\build\Fody.targets'))" />
+  </Target>
+  <Import Project="..\packages\Fody.6.2.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.2.0\build\Fody.targets')" />
+</Project>

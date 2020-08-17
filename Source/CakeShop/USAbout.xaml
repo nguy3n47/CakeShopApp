@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="CakeShop.USAbout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CakeShop"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DesignHeight="650.4" d:DesignWidth="1363.2">
+    <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect ExpandIn, Duration=0:0:0}">
+        <Grid Name="_frame">
+            <DockPanel LastChildFill="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2.5*"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0">
+                        <Border.Background>
+                            <ImageBrush ImageSource="Assets/Group-4-Copy-19-800x800.jpg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></ImageBrush>
+                        </Border.Background>
+                        <Grid>
+                            <Border>
+                                <Border.Background>
+                                    <SolidColorBrush Color="Black" Opacity="0.5"/>
+                                </Border.Background>
+                            </Border>
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock TextWrapping="Wrap" Name="t" FontSize="18" TextAlignment="Center" Margin="300,0" Foreground="#DDFFFFFF" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <Grid Grid.Row="1">
+                        <StackPanel VerticalAlignment="Top" Margin="0,40,0,0">
+                            <TextBlock TextWrapping="Wrap" Name="tt" FontSize="18" Margin="100,0" Foreground="#777"/>
+                            <TextBlock TextWrapping="Wrap" Name="ttt" FontSize="18" Margin="100,20,100,0" Foreground="#777"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </DockPanel>
+        </Grid>
+    </materialDesign:TransitioningContent>
+</UserControl>

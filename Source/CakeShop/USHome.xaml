@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="CakeShop.USHome"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CakeShop"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DesignHeight="650.4" d:DesignWidth="1363.2" Loaded="UserControl_Loaded">
+    <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect ExpandIn, Duration=0:0:0}">
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="650.4"/>
+                <RowDefinition Height="900"/>
+            </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Name="_frame">
+                <!--<Image Name="Banner" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>-->
+                <Image Margin="10,0,10,20" Name="Banner1" Source="Assets/A2BD617D-99AF-4D6A-86E2-98E73E8E3D1B-1400x525.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill" Panel.ZIndex="4"></Image>
+                <Image Margin="10,0,10,20" Name="Banner2" Source="Assets/B23CA568-4163-4353-A85A-10D9D54685C9-1400x525.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill" Panel.ZIndex="3"></Image>
+                <Image Margin="10,0,10,20" Name="Banner3" Source="Assets/7720EC99-CDBF-44E0-9868-5C96800CA6FA-1400x525.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill" Panel.ZIndex="2"></Image>
+                <Image Margin="10,0,10,20" Name="Banner4" Source="Assets/D1ED251A-1EC3-405E-9ED7-05DD3A78F500-1400x525.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill" Panel.ZIndex="1"></Image>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Cursor="Hand" Grid.Column="0" Grid.Row="0" Margin="10 0 5 5">
+                    <Label Padding="25" Content="CAKE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="22" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+                    <Image Source="Assets/A343D42D-8308-443A-8F7F-080E956CA111-400x400.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>
+                </Grid>
+                <Grid Cursor="Hand" Grid.Column="1" Grid.Row="0" Margin="5 0 5 5">
+                    <Label Padding="25" Content="BREAD" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="22" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+                    <Image Source="Assets/E6205866-2CC1-498F-9A44-BD8C543C6DED-400x400.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>
+                </Grid>
+                <Grid Grid.Column="2" Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Cursor="Hand" Margin="5 0 10 5">
+                        <Label Padding="25" Content="BAGELS" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="22" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+                        <Image Source="Assets/B7C25144-72FF-4232-9A0B-F46BCAB509C2-800x800.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>
+                    </Grid>
+                    <Grid Cursor="Hand" Grid.Row="1" Margin="5,5,10,5">
+                        <Label Padding="25" Content="BUNS" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="22" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+                        <Image Source="Assets/9E1AC602-6231-4B10-883D-FFDF0E379311-800x800.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="0" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Cursor="Hand" Margin="10 5 5 10">
+                        <Label Padding="25" Content="LOAF CAKE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="22" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+                        <Image Source="Assets/40ABF8D3-550B-424D-81E2-13E740A107E2.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>
+                    </Grid>
+                    <Grid Cursor="Hand" Margin="5 5 5 10" Grid.Column="1">
+                        <Label Padding="25" Content="CUPCAKE &amp; MUFFIN" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="22" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+                        <Image Source="Assets/Group-4-800x800.jpg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>
+                    </Grid>
+                </Grid>
+                <Grid Cursor="Hand" Grid.Column="1" Grid.Row="1" Margin="5 5 5 10">
+                    <Label Padding="25" Content="ROLL CAKE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="22" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+                    <Image Source="Assets/369D09AF-C959-4429-AD00-7FC86A027B58.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>
+                </Grid>
+                <Grid Cursor="Hand" Grid.Column="2" Grid.Row="1" Margin="5,5,10,10">
+                    <Label Padding="25" Content="OTHERS" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontSize="22" VerticalAlignment="Bottom" Panel.ZIndex="1"/>
+                    <Image Source="Assets/5289E50E-DE67-457E-B62A-74D0EFAE0198-800x800.jpeg" RenderOptions.BitmapScalingMode="HighQuality" Stretch="UniformToFill"></Image>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+    </materialDesign:TransitioningContent>
+</UserControl>
